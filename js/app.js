@@ -1,11 +1,13 @@
-//local storage
+const localStorageContent = localStorage.getItem('names');
 
-//add to local storage
+let names;
+if (localStorageContent === null) {
+    names = [];
+} else { 
+ names = JSON.parse(localStorageContent);
+}
+names.push('Juan');
+names.push('Walter White');
+names.push('JOhn Doe');
 
-localStorage.setItem('name', 'juan');
-
-
-//localStorage.removeItem('name');
-
-
-const name = localStorage.getItem('name');
+localStorage.setItem('names', JSON.stringify(name));
