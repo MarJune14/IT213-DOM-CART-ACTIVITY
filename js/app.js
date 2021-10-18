@@ -1,13 +1,16 @@
-const localStorageContent = localStorage.getItem('names');
+//variables
 
-let names;
-if (localStorageContent === null) {
-    names = [];
-} else { 
- names = JSON.parse(localStorageContent);
+
+//eventlisteners
+function eventlisteners(){
+    // from submission
+    document.querySelector('#form').addEventListener('submit', newTweet);
 }
-names.push('Juan');
-names.push('Walter White');
-names.push('JOhn Doe');
 
-localStorage.setItem('names', JSON.stringify(name));
+//functions
+
+function newTweet(e) {
+    e.preventDefault();
+
+    console.log('Form Submitted');
+}
