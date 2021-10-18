@@ -113,6 +113,13 @@ function clearCart() {
         shoppingCartContent.removeChild(shoppingCartContent.firstChild);
     }
 
+    //clear local storage
+    clearLocalStorage();
+
+}
+
+function clearLocalStorage() {
+    localStorage.clear();
 }
 
 //load when document is ready
